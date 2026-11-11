@@ -1,4 +1,3 @@
-@@ -0,0 +1,8 @@
 # Python Week 7 Assignment
 
 - list_warmup.py: Demonstrates basic list operations including index retrieval, .append(), .remove(), and len().
