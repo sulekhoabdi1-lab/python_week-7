@@ -1,20 +1,21 @@
-@@ -0,0 +1,19 @@
-items = ["bread", "avocado", "milk", "sweet potatoes", "tea"]
 
-print("Numbered Items:")
-for index, item in enumerate(items, start=1):
-    print(f"{index}. {item}")
+# Write three notes to a new file
+with open("my_notes.txt", "w") as f:
+    f.write("Python is fun\n")
+    f.write("Files are useful\n")
+    f.write("Week 7 is going well\n")
 
-long_names_count = 0
-for item in items:
-    if len(item) > 4:
-        long_names_count += 1
+# Add a fourth note WITHOUT erasing the first three
+with open("my_notes.txt", "a") as f:
+    f.write("I added this later\n")
 
-print(f"\nItems with more than 4 letters: {long_names_count}")
+# Read the file back and print each line with no blank lines between
+print("--- My notes ---")
+with open("my_notes.txt", "r") as f:
+    for line in f:
+        print(line, end="")
 
-longest_item = items[0]
-for item in items:
-    if len(item) > len(longest_item):
-        longest_item = item
-
-print(f"The longest item name is: {longest_item}")
+# Count the lines
+with open("my_notes.txt", "r") as f:
+    lines = f.readlines()
+print("Total lines:", len(lines))
